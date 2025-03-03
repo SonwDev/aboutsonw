@@ -31,21 +31,42 @@ export default function Cursor() {
   }, []);
 
   return (
-    <motion.div
-      className="fixed top-0 left-0 pointer-events-none z-50"
-      animate={{
-        x: mousePosition.x,
-        y: mousePosition.y,
-        scale: isHovering ? 1.5 : 1,
-      }}
-      transition={{
-        type: "spring",
-        stiffness: 150,
-        damping: 15,
-        mass: 0.1
-      }}
-    >
-      <div className="w-2 h-2 bg-primary/70 rounded-full" />
-    </motion.div>
+    <>
+      {/* Main cursor dot */}
+      <motion.div
+        className="fixed top-0 left-0 pointer-events-none z-50"
+        animate={{
+          x: mousePosition.x,
+          y: mousePosition.y,
+          scale: isHovering ? 1.5 : 1,
+        }}
+        transition={{
+          type: "spring",
+          stiffness: 150,
+          damping: 15,
+          mass: 0.1
+        }}
+      >
+        <div className="w-2 h-2 bg-primary/70 rounded-full" />
+      </motion.div>
+
+      {/* Cursor trail */}
+      <motion.div
+        className="fixed top-0 left-0 pointer-events-none z-40"
+        animate={{
+          x: mousePosition.x,
+          y: mousePosition.y,
+          scale: isHovering ? 1.2 : 1,
+        }}
+        transition={{
+          type: "spring",
+          stiffness: 50,
+          damping: 25,
+          mass: 0.3
+        }}
+      >
+        <div className="w-4 h-4 bg-primary/5 rounded-full blur-sm" />
+      </motion.div>
+    </>
   );
 }
