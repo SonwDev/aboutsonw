@@ -34,7 +34,7 @@ export default function About() {
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.2 }}
               >
-                Hi, I'm [Your Name]
+                Hi, I'm John Doe
               </motion.h1>
               <motion.p 
                 className="text-lg text-muted-foreground mb-4"
