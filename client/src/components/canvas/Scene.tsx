@@ -1,7 +1,7 @@
 import { useFrame } from '@react-three/fiber';
 import { useRef } from 'react';
 import * as THREE from 'three';
-import Box from './Box';
+import TorusKnot from './TorusKnot';
 
 interface SceneProps {
   scrollPosition: number;
@@ -9,19 +9,21 @@ interface SceneProps {
 
 export default function Scene({ scrollPosition }: SceneProps) {
   const groupRef = useRef<THREE.Group>(null);
+  const scrollFactor = scrollPosition * 0.002;
 
   useFrame(() => {
     if (!groupRef.current) return;
-    groupRef.current.rotation.y = scrollPosition * 0.1;
+    groupRef.current.rotation.y = scrollPosition * 0.001;
   });
 
   return (
     <group ref={groupRef}>
-      <ambientLight intensity={0.5} color="#ffffff" />
-      <directionalLight position={[10, 10, 5]} intensity={1} color="#ffffff" />
-      <Box position={[0, 0, 0]} />
-      <Box position={[-2, 1, -2]} />
-      <Box position={[2, -1, -4]} />
+      {/* Simple ambient and directional light setup */}
+      <ambientLight intensity={0.5} />
+      <directionalLight position={[5, 5, 5]} intensity={1} />
+
+      {/* Single TorusKnot for testing */}
+      <TorusKnot position={[0, 0, 0]} scrollFactor={scrollFactor} />
     </group>
   );
 }
