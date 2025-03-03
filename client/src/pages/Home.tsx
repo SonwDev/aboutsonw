@@ -15,7 +15,12 @@ export default function Home() {
       <div className="fixed top-0 left-0 w-full h-screen">
         <Suspense fallback={<Loading />}>
           <Canvas
-            camera={{ position: [0, 0, 5], fov: 75 }}
+            camera={{ 
+              position: [3, 3, 8], 
+              fov: 60,
+              near: 0.1,
+              far: 1000
+            }}
             style={{ background: '#1a1a1a' }}
           >
             <Scene scrollPosition={scrollPosition} />
