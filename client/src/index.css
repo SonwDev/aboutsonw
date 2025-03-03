@@ -10,9 +10,4 @@
   body {
     @apply font-sans antialiased bg-background text-foreground;
   }
-
-  /* Only hide cursor on interactive elements */
-  button, a, [role="button"] {
-    @apply cursor-none transition-all duration-200;
-  }
 }
