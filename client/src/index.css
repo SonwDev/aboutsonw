@@ -8,11 +8,11 @@
   }
 
   body {
-    @apply font-sans antialiased bg-background text-foreground cursor-none;
+    @apply font-sans antialiased bg-background text-foreground;
   }
 
-  /* Hide cursor on interactive elements to use custom cursor */
-  a, button, [role="button"] {
+  /* Only hide cursor on interactive elements */
+  button, a, [role="button"] {
     @apply cursor-none;
   }
 }
