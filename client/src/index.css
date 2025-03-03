@@ -13,6 +13,6 @@
 
   /* Only hide cursor on interactive elements */
   button, a, [role="button"] {
-    @apply cursor-none;
+    @apply cursor-none transition-all duration-200;
   }
 }
