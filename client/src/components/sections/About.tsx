@@ -34,7 +34,7 @@ export default function About() {
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.2 }}
               >
-                Hi, I'm John Doe
+                Hallo!, I'm Sonw or you can call me Snow.
               </motion.h1>
               <motion.p 
                 className="text-lg text-muted-foreground mb-4"
@@ -42,7 +42,7 @@ export default function About() {
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.4 }}
               >
-                A passionate developer focused on creating beautiful web experiences
+                A passionate developer focused on creating projects.
               </motion.p>
               <motion.p 
                 className="text-foreground"
@@ -50,7 +50,7 @@ export default function About() {
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.6 }}
               >
-                With expertise in modern web technologies including React,
+                With expertise in modern technologies including Python, C++,
                 TypeScript, and responsive design, I bring creative visions to life
                 through clean and efficient code.
               </motion.p>

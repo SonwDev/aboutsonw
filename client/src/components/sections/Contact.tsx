@@ -18,7 +18,7 @@ export default function Contact() {
             <div className="flex flex-col gap-4">
               <Button variant="outline" className="w-full justify-start">
                 <Mail className="mr-2 h-4 w-4" />
-                email@example.com
+                kazumiyarine@gmail.com
               </Button>
               <Button variant="outline" className="w-full justify-start">
                 <Github className="mr-2 h-4 w-4" />

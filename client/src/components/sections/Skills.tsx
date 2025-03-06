@@ -3,7 +3,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 
 const skills = [
-  "React", "TypeScript", "Next.js", "TailwindCSS",
+  "Python", "TypeScript", "Next.js", "TailwindCSS",
   "Node.js", "PostgreSQL", "Git", "AWS",
   "UI/UX Design", "Responsive Design", "RESTful APIs", "GraphQL"
 ];

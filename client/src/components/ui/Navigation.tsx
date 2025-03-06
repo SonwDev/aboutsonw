@@ -12,7 +12,7 @@ export default function Navigation() {
         <div className="flex items-center justify-between h-16">
           <Link href="/">
             <Button variant="ghost" className="text-lg font-bold">
-              Portfolio
+              Sonw
             </Button>
           </Link>
 
