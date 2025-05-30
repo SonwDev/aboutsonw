@@ -1,7 +1,7 @@
 import React from "react";
 import { useForm } from "react-hook-form";
 import emailjs from "emailjs-com";
-import { Mail, Github, Youtube, Linkedin } from "lucide-react";
+import { Mail, Github, Youtube } from "lucide-react";
 
 type FormData = {
   name: string;
@@ -20,14 +20,14 @@ export default function Contact() {
   const onSubmit = async (data: FormData) => {
     try {
       await emailjs.send(
-        "service_dikbg7y",     // Thay bằng ID thật
-        "template_k2fs5vn",    // Thay bằng ID thật
+        "service_dikbg7y",    
+        "template_k2fs5vn",    
         {
           from_name: data.name,
           reply_to: data.email,
           message: data.message,
         },
-        "V2dw6dYxEFM7mCIF1"      // Thay bằng public key
+        "V2dw6dYxEFM7mCIF1"     
       );
       reset();
       alert("Success!");
@@ -51,9 +51,9 @@ const ContactCard = () => {
       href: "https://github.com/SonwDev",
     },
     {
-      label: "LinkedIn",
-      icon: Linkedin,
-      href: "https://linkedin.com",
+      label: "Youtube",
+      icon: Youtube,
+      href: "https://youtube.com/@TransSonw",
     },
   ];
 

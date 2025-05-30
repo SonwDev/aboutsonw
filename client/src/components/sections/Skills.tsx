@@ -4,8 +4,8 @@ import { Badge } from "@/components/ui/badge";
 
 const skills = [
   "Python", "TypeScript", "Next.js", "TailwindCSS",
-  "Node.js", "PostgreSQL", "Git", "AWS",
-  "UI/UX Design", "Responsive Design", "RESTful APIs", "GraphQL"
+  "Node.js", "PostgreSQL", "C++", "AWS",
+  "UI/UX Design", "Arduino", "RESTful APIs", "GraphQL"
 ];
 
 const container = {
