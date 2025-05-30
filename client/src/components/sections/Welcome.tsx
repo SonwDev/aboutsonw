@@ -44,7 +44,7 @@ export default function Welcome() {
             {/* Background glow effects */}
             <div className="absolute -inset-8 bg-gradient-to-r from-primary/20 via-blue-500/20 to-purple-500/20 rounded-full blur-3xl opacity-60" />
             <div className="absolute -inset-4 bg-gradient-to-r from-primary/10 to-blue-500/10 rounded-full blur-xl" />
-            
+
             <div className="relative z-10">
               <motion.h1 
                 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6 bg-gradient-to-r from-primary via-blue-500 to-purple-600 bg-clip-text text-transparent leading-tight"
@@ -58,24 +58,30 @@ export default function Welcome() {
               >
                 to my portfolio
               </motion.p>
-              
+
               {/* Animated dots */}
               <motion.div 
-                className="flex justify-center space-x-2 mt-8"
+                className="flex space-x-2 mt-8"
                 variants={item}
               >
-                {[0, 1, 2].map((i) => (
+                {[...Array(3)].map((_, i) => (
                   <motion.div
                     key={i}
-                    className="w-2 h-2 rounded-full bg-primary/60"
+                    className="w-3 h-3 rounded-full bg-gradient-to-r from-primary via-blue-500 to-purple-600 shadow-lg"
                     animate={{
-                      scale: [1, 1.2, 1],
-                      opacity: [0.6, 1, 0.6],
+                      scale: [1, 1.4, 1],
+                      opacity: [0.7, 1, 0.7],
+                      boxShadow: [
+                        "0 0 0 0 rgba(59, 130, 246, 0)",
+                        "0 0 20px 5px rgba(59, 130, 246, 0.3)",
+                        "0 0 0 0 rgba(59, 130, 246, 0)"
+                      ]
                     }}
                     transition={{
-                      duration: 1.5,
+                      duration: 2,
                       repeat: Infinity,
-                      delay: i * 0.2,
+                      delay: i * 0.3,
+                      ease: "easeInOut"
                     }}
                   />
                 ))}

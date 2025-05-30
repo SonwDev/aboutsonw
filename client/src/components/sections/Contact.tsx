@@ -12,15 +12,16 @@ export default function Contact() {
         transition={{ duration: 0.8 }}
         className="max-w-4xl w-full"
       >
-        <Card className="border-primary/30 backdrop-blur-md bg-gradient-to-br from-background/90 via-background/95 to-background/80 shadow-2xl shadow-primary/10">
-          <CardContent className="p-8 md:p-12 relative overflow-hidden">
-            {/* Decorative elements */}
-            <div className="absolute top-0 right-0 w-40 h-40 bg-gradient-to-bl from-primary/10 to-blue-500/10 rounded-full blur-3xl" />
-            <div className="absolute bottom-0 left-0 w-32 h-32 bg-gradient-to-tr from-purple-500/10 to-primary/10 rounded-full blur-2xl" />
+        <Card className="glass-strong border-primary/40 bg-gradient-to-br from-background/60 via-background/80 to-background/60 shadow-2xl shadow-primary/20 card-hover">
+          <CardContent className="p-8 md:p-16 relative overflow-hidden">
+            {/* Enhanced decorative elements */}
+            <div className="absolute top-0 right-0 w-60 h-60 bg-gradient-to-bl from-primary/20 to-blue-500/20 rounded-full blur-3xl animate-pulse-slow" />
+            <div className="absolute bottom-0 left-0 w-48 h-48 bg-gradient-to-tr from-purple-500/20 to-primary/20 rounded-full blur-2xl animate-float" />
+            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-conic opacity-10 rounded-full blur-3xl animate-spin-slow" />
             
             <div className="relative z-10">
               <motion.h2 
-                className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-primary via-blue-500 to-purple-600 bg-clip-text text-transparent text-center"
+                className="text-5xl md:text-6xl font-bold mb-6 gradient-text text-center"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
