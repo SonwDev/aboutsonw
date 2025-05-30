@@ -4,8 +4,14 @@ import { motion } from 'framer-motion';
 export default function Cursor() {
   const [mousePosition, setMousePosition] = useState({ x: -100, y: -100 });
   const [isHovering, setIsHovering] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
+    // Check if device supports hover (not mobile/touch)
+    const hasHover = window.matchMedia('(hover: hover)').matches;
+    setIsMobile(!hasHover);
+
+    if (!hasHover) return; // Don't show custom cursor on mobile
     const moveCursor = (e: MouseEvent) => {
       setMousePosition({ x: e.clientX, y: e.clientY });
     };
@@ -29,6 +35,9 @@ export default function Cursor() {
       });
     };
   }, []);
+
+  // Don't render cursor on mobile devices
+  if (isMobile) return null;
 
   return (
     <>

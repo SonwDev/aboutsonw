@@ -42,7 +42,7 @@ export default function Skills() {
         />
 
         <Card className="border-primary/30 backdrop-blur-md bg-gradient-to-br from-background/90 via-background/95 to-background/80 shadow-2xl shadow-primary/10">
-          <CardContent className="p-8 md:p-12 relative overflow-hidden">
+          <CardContent className="p-4 sm:p-6 md:p-8 lg:p-12 relative overflow-hidden">
             {/* Decorative grid pattern */}
             <div className="absolute inset-0 opacity-5">
               <div className="grid grid-cols-8 gap-4 h-full">
@@ -54,7 +54,7 @@ export default function Skills() {
             
             <div className="relative z-10">
               <motion.h2 
-                className="text-4xl md:text-5xl font-bold mb-10 bg-gradient-to-r from-primary via-blue-500 to-purple-600 bg-clip-text text-transparent"
+                className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-6 sm:mb-8 md:mb-10 bg-gradient-to-r from-primary via-blue-500 to-purple-600 bg-clip-text text-transparent"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
@@ -64,7 +64,7 @@ export default function Skills() {
               </motion.h2>
               
               <motion.div 
-                className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4"
+                className="grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4"
                 variants={container}
                 initial="hidden"
                 whileInView="show"
