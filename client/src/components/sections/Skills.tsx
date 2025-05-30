@@ -5,8 +5,8 @@ import { useRef } from "react";
 
 const skills = [
   "Python", "TypeScript", "Next.js", "TailwindCSS",
-  "Node.js", "PostgreSQL", "Git", "AWS",
-  "UI/UX Design", "Responsive Design", "RESTful APIs", "GraphQL"
+  "Node.js", "PostgreSQL", "C++", "AWS",
+  "UI/UX Design", "Arduino", "RESTful APIs", "GraphQL"
 ];
 
 const container = {
@@ -110,10 +110,10 @@ export default function Skills() {
               >
                 <h3 className="text-xl font-semibold text-foreground/80 mb-6">Proficiency Levels</h3>
                 {[
-                  { category: "Frontend Development", level: 95 },
-                  { category: "Backend Development", level: 85 },
+                  { category: "Frontend Development", level: 20 },
+                  { category: "Backend Development", level: 45 },
                   { category: "UI/UX Design", level: 80 },
-                  { category: "Database Management", level: 75 }
+                  { category: "Database Management", level: 10 }
                 ].map((item, index) => (
                   <div key={index} className="space-y-2">
                     <div className="flex justify-between text-sm">

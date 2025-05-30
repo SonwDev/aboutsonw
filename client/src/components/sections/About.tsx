@@ -72,7 +72,7 @@ export default function About() {
                 {/* Achievement highlights */}
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 mt-6 sm:mt-8 pt-4 sm:pt-6 border-t border-primary/20">
                   {[
-                    { number: "50+", label: "Projects Completed" },
+                    { number: "20+", label: "Projects Completed" },
                     { number: "3+", label: "Years Experience" },
                     { number: "∞", label: "Lines of Code" }
                   ].map((stat, index) => (

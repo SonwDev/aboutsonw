@@ -1,7 +1,7 @@
 import { motion, useTransform, useScroll } from "framer-motion";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Mail, Github, Linkedin, Twitter } from "lucide-react";
+import { Mail, Github, Linkedin, Twitter, Youtube } from "lucide-react";
 import { useRef } from "react";
 
 export default function Contact() {
@@ -54,15 +54,15 @@ export default function Contact() {
                     icon: Github, 
                     label: "GitHub", 
                     value: "View Profile",
-                    href: "https://github.com",
+                    href: "https://github.com/SonwDev",
                     color: "from-gray-600 to-gray-800"
                   },
                   { 
-                    icon: Linkedin, 
-                    label: "LinkedIn", 
-                    value: "Connect",
-                    href: "https://linkedin.com",
-                    color: "from-blue-600 to-blue-800"
+                    icon: Youtube, 
+                    label: "YouTube", 
+                    value: "Subscribe",
+                    href: "https://youtube.com/@TransSonw",
+                    color: "from-red-600 to-red-800"
                   }
                 ].map((contact, index) => (
                   <motion.div
