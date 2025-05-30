@@ -43,7 +43,7 @@ export default function Welcome() {
           animate="show"
           exit="exit"
         >
-          <div className="text-center relative">
+          <div className="text-center relative flex flex-col items-center justify-center min-h-0">
             {/* Background glow effects */}
             <div className="absolute -inset-8 bg-gradient-to-r from-primary/20 via-blue-500/20 to-purple-500/20 rounded-full blur-3xl opacity-60" />
             <div className="absolute -inset-4 bg-gradient-to-r from-primary/10 to-blue-500/10 rounded-full blur-xl" />
@@ -64,7 +64,7 @@ export default function Welcome() {
 
               {/* Animated dots */}
               <motion.div 
-                className="flex space-x-2 mt-8"
+                className="flex space-x-2 mt-8 justify-center"
                 variants={item}
               >
                 {[...Array(3)].map((_, i) => (
