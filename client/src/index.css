@@ -31,6 +31,20 @@
     scroll-behavior: smooth;
   }
 
+  /* Reduce motion blur during scrolling */
+  * {
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    transform-style: preserve-3d;
+  }
+
+  /* Optimize animations for better performance */
+  @media (prefers-reduced-motion: no-preference) {
+    * {
+      will-change: auto;
+    }
+  }
+
   /* Custom scrollbar */
   ::-webkit-scrollbar {
     width: 8px;
