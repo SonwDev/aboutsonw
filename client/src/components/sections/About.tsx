@@ -26,36 +26,65 @@ export default function About() {
         />
 
         <motion.div style={{ opacity }}>
-          <Card className="border-primary/20 backdrop-blur-sm bg-background/80">
-            <CardContent className="p-6">
-              <motion.h1 
-                className="text-4xl font-bold mb-6 bg-gradient-to-r from-primary to-blue-600 bg-clip-text text-transparent"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 0.2 }}
+          <Card className="border-primary/30 backdrop-blur-md bg-gradient-to-br from-background/90 via-background/95 to-background/80 shadow-2xl shadow-primary/10">
+          <CardContent className="p-8 md:p-12 relative overflow-hidden">
+            {/* Decorative elements */}
+            <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-primary/10 to-blue-500/10 rounded-full blur-2xl" />
+            <div className="absolute bottom-0 left-0 w-24 h-24 bg-gradient-to-tr from-purple-500/10 to-primary/10 rounded-full blur-xl" />
+
+            <div className="relative z-10">
+              <motion.h2 
+                className="text-4xl md:text-5xl font-bold mb-8 bg-gradient-to-r from-primary via-blue-500 to-purple-600 bg-clip-text text-transparent"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
               >
-                Hallo!, I'm Sonw or you can call me Snow.
-              </motion.h1>
-              <motion.p 
-                className="text-lg text-muted-foreground mb-4"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 0.4 }}
+                About Me
+              </motion.h2>
+
+              <motion.div 
+                className="space-y-6"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                viewport={{ once: true }}
               >
-                A passionate developer focused on creating projects.
-              </motion.p>
-              <motion.p 
-                className="text-foreground"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 0.6 }}
-              >
-                With expertise in modern technologies including Python, C++,
-                TypeScript, and responsive design, I bring creative visions to life
-                through clean and efficient code.
-              </motion.p>
-            </CardContent>
-          </Card>
+                <p className="text-lg md:text-xl leading-relaxed text-foreground/90 font-light">
+                  I'm a passionate developer who loves creating beautiful and functional web applications. 
+                  With expertise in modern technologies and a keen eye for design, I bring ideas to life 
+                  through code.
+                </p>
+
+                <p className="text-lg md:text-xl leading-relaxed text-muted-foreground font-light">
+                  My goal is to craft digital experiences that are both visually stunning 
+                  and highly performant, focusing on user-centered design and clean, maintainable code.
+                </p>
+
+                {/* Achievement highlights */}
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8 pt-6 border-t border-primary/20">
+                  {[
+                    { number: "50+", label: "Projects Completed" },
+                    { number: "3+", label: "Years Experience" },
+                    { number: "∞", label: "Lines of Code" }
+                  ].map((stat, index) => (
+                    <motion.div 
+                      key={index}
+                      className="text-center"
+                      initial={{ opacity: 0, scale: 0.8 }}
+                      whileInView={{ opacity: 1, scale: 1 }}
+                      transition={{ duration: 0.5, delay: 0.4 + index * 0.1 }}
+                      viewport={{ once: true }}
+                    >
+                      <div className="text-2xl md:text-3xl font-bold text-primary mb-1">{stat.number}</div>
+                      <div className="text-sm text-muted-foreground">{stat.label}</div>
+                    </motion.div>
+                  ))}
+                </div>
+              </motion.div>
+            </div>
+          </CardContent>
+        </Card>
         </motion.div>
       </motion.div>
     </section>
