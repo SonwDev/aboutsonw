@@ -1,7 +1,7 @@
 import React from "react";
 import { useForm } from "react-hook-form";
 import emailjs from "emailjs-com";
-import { Mail, Github, Youtube } from "lucide-react";
+import { Mail, Github, Youtube, Linkedin } from "lucide-react";
 
 type FormData = {
   name: string;
@@ -35,9 +35,10 @@ export default function Contact() {
       console.error("Lỗi gửi email:", error);
       alert("Đã xảy ra lỗi. Vui lòng thử lại sau.");
     }
-  };
+  }
+}
 
- const ContactCard = () => {
+const ContactCard = () => {
   const contacts = [
     {
       label: "kazumiyarine@gmail.com",
@@ -81,4 +82,4 @@ export default function Contact() {
   );
 };
 
-export default ContactCard;
+export { ContactCard };
