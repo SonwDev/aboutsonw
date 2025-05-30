@@ -20,8 +20,8 @@ export default function Contact() {
   const onSubmit = async (data: FormData) => {
     try {
       await emailjs.send(
-        "your_service_id",     // Thay bằng ID thật
-        "your_template_id",    // Thay bằng ID thật
+        "service_dikbg7y",     // Thay bằng ID thật
+        "template_k2fs5vn",    // Thay bằng ID thật
         {
           from_name: data.name,
           reply_to: data.email,
@@ -38,93 +38,50 @@ export default function Contact() {
   };
 
   return (
-    <div className="p-6 md:p-10 max-w-3xl mx-auto space-y-10">
-      <h2 className="text-3xl font-bold text-center">Liên hệ với tôi</h2>
+  <div className="p-6 md:p-10 max-w-3xl mx-auto space-y-10">
+      <h2 className="text-3xl font-bold text-center">Get in touch</h2>
 
       <ul className="space-y-4 text-lg">
-        <li className="flex items-center gap-2 hover:scale-105 transition-transform">
-          <Mail className="text-red-500" />
+        <li>
           <a
             href="mailto:kazumiyarine@gmail.com"
-            className="text-blue-600 hover:underline"
+            className="flex items-center gap-3 px-3 py-2 rounded-md hover:bg-gray-100 transition-transform duration-200 hover:scale-[1.02] group"
           >
-            kazumiyarine@gmail.com
+            <Mail className="text-red-500 group-hover:animate-pulse" />
+            <span className="text-blue-600 group-hover:underline">
+              kazumiyarine@gmail.com
+            </span>
           </a>
         </li>
-        <li className="flex items-center gap-2 hover:scale-105 transition-transform">
-          <Github className="text-black" />
+
+        <li>
           <a
             href="https://github.com/SonwDev"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-blue-600 hover:underline"
+            className="flex items-center gap-3 px-3 py-2 rounded-md hover:bg-gray-100 transition-transform duration-200 hover:scale-[1.02] group"
           >
-            github.com/SonwDev
+            <Github className="text-black group-hover:text-gray-800" />
+            <span className="text-blue-600 group-hover:underline">
+              github.com/SonwDev
+            </span>
           </a>
         </li>
-        <li className="flex items-center gap-2 hover:scale-105 transition-transform">
-          <Youtube className="text-red-600" />
+
+        <li>
           <a
             href="https://www.youtube.com/@SonwDev"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-blue-600 hover:underline"
+            className="flex items-center gap-3 px-3 py-2 rounded-md hover:bg-gray-100 transition-transform duration-200 hover:scale-[1.02] group"
           >
-            youtube.com/@SonwDev
+            <Youtube className="text-red-600 group-hover:text-red-500" />
+            <span className="text-blue-600 group-hover:underline">
+              youtube.com/@SonwDev
+            </span>
           </a>
         </li>
       </ul>
-
-      <form
-        onSubmit={handleSubmit(onSubmit)}
-        className="bg-gray-100 p-6 rounded-xl shadow-md space-y-4"
-      >
-        <h3 className="text-xl font-semibold">Gửi tin nhắn trực tiếp</h3>
-
-        <input
-          type="text"
-          placeholder="Tên của bạn"
-          {...register("name", { required: "Vui lòng nhập tên" })}
-          className="w-full p-2 rounded border border-gray-300 focus:ring-2 focus:ring-blue-400"
-        />
-        {errors.name && <p className="text-red-500 text-sm">{errors.name.message}</p>}
-
-        <input
-          type="email"
-          placeholder="Email của bạn"
-          {...register("email", {
-            required: "Vui lòng nhập email",
-            pattern: {
-              value: /^\S+@\S+$/i,
-              message: "Email không hợp lệ",
-            },
-          })}
-          className="w-full p-2 rounded border border-gray-300 focus:ring-2 focus:ring-blue-400"
-        />
-        {errors.email && <p className="text-red-500 text-sm">{errors.email.message}</p>}
-
-        <textarea
-          placeholder="Nội dung tin nhắn"
-          rows={5}
-          {...register("message", { required: "Vui lòng nhập nội dung" })}
-          className="w-full p-2 rounded border border-gray-300 focus:ring-2 focus:ring-blue-400"
-        />
-        {errors.message && <p className="text-red-500 text-sm">{errors.message.message}</p>}
-
-        <button
-          type="submit"
-          disabled={isSubmitting}
-          className={`bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition ${
-            isSubmitting ? "opacity-50 cursor-not-allowed" : ""
-          }`}
-        >
-          {isSubmitting ? "Đang gửi..." : "Gửi"}
-        </button>
-
-        {isSubmitSuccessful && (
-          <p className="text-green-600 font-medium">✔️ Tin nhắn đã được gửi!</p>
-        )}
-      </form>
     </div>
   );
 }
