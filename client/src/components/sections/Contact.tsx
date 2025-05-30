@@ -30,10 +30,10 @@ export default function Contact() {
         "V2dw6dYxEFM7mCIF1"      // Thay bằng public key
       );
       reset();
-      alert("Đã gửi thành công!");
+      alert("Success!");
     } catch (error) {
-      console.error("Lỗi gửi email:", error);
-      alert("Đã xảy ra lỗi. Vui lòng thử lại sau.");
+      console.error("Error sending email:", error);
+      alert("An error occurred. Please try again later.");
     }
   }
 }
