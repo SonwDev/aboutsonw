@@ -27,7 +27,7 @@ export default function Contact() {
           reply_to: data.email,
           message: data.message,
         },
-        "your_public_key"      // Thay bằng public key
+        "V2dw6dYxEFM7mCIF1"      // Thay bằng public key
       );
       reset();
       alert("Đã gửi thành công!");
@@ -37,51 +37,48 @@ export default function Contact() {
     }
   };
 
+ const ContactCard = () => {
+  const contacts = [
+    {
+      label: "kazumiyarine@gmail.com",
+      icon: Mail,
+      href: "mailto:kazumiyarine@gmail.com",
+    },
+    {
+      label: "Github",
+      icon: Github,
+      href: "https://github.com/SonwDev",
+    },
+    {
+      label: "LinkedIn",
+      icon: Linkedin,
+      href: "https://linkedin.com",
+    },
+  ];
+
   return (
-  <div className="p-6 md:p-10 max-w-3xl mx-auto space-y-10">
-      <h2 className="text-3xl font-bold text-center">Get in touch</h2>
-
-      <ul className="space-y-4 text-lg">
-        <li>
-          <a
-            href="mailto:kazumiyarine@gmail.com"
-            className="flex items-center gap-3 px-3 py-2 rounded-md hover:bg-gray-100 transition-transform duration-200 hover:scale-[1.02] group"
-          >
-            <Mail className="text-red-500 group-hover:animate-pulse" />
-            <span className="text-blue-600 group-hover:underline">
-              kazumiyarine@gmail.com
-            </span>
-          </a>
-        </li>
-
-        <li>
-          <a
-            href="https://github.com/SonwDev"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-3 px-3 py-2 rounded-md hover:bg-gray-100 transition-transform duration-200 hover:scale-[1.02] group"
-          >
-            <Github className="text-black group-hover:text-gray-800" />
-            <span className="text-blue-600 group-hover:underline">
-              github.com/SonwDev
-            </span>
-          </a>
-        </li>
-
-        <li>
-          <a
-            href="https://www.youtube.com/@SonwDev"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-3 px-3 py-2 rounded-md hover:bg-gray-100 transition-transform duration-200 hover:scale-[1.02] group"
-          >
-            <Youtube className="text-red-600 group-hover:text-red-500" />
-            <span className="text-blue-600 group-hover:underline">
-              youtube.com/@SonwDev
-            </span>
-          </a>
-        </li>
+    <div className="max-w-md mx-auto p-6 rounded-xl border border-white/10 backdrop-blur-md bg-white/5">
+      <h2 className="text-2xl font-semibold text-white mb-6">Get in Touch</h2>
+      <ul className="space-y-4">
+        {contacts.map(({ label, icon: Icon, href }, idx) => (
+          <li key={idx}>
+            <a
+              href={href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group flex items-center gap-3 px-4 py-3 rounded-md border border-white/10 bg-white/5 text-white transition-all duration-200 hover:border-white/30 hover:bg-white/10 hover:shadow-md hover:shadow-white/10"
+            >
+              <Icon
+                size={18}
+                className="transition-transform duration-200 group-hover:scale-110"
+              />
+              <span className="text-sm">{label}</span>
+            </a>
+          </li>
+        ))}
       </ul>
     </div>
   );
-}
+};
+
+export default ContactCard;
