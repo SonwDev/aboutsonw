@@ -1,6 +1,7 @@
 import { motion, useTransform, useScroll } from "framer-motion";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { useRef } from "react";
 
 const skills = [
   "Python", "TypeScript", "Next.js", "TailwindCSS",
@@ -24,16 +25,25 @@ const item = {
 };
 
 export default function Skills() {
-  const { scrollYProgress } = useScroll();
+  const ref = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["start end", "end start"]
+  });
 
-  const y1 = useTransform(scrollYProgress, [0.3, 1], [0, -100]);
-  const scale = useTransform(scrollYProgress, [0.3, 0.6], [0.8, 1]);
-  const opacity = useTransform(scrollYProgress, [0.3, 0.4, 0.8], [0, 1, 1]);
+  const y1 = useTransform(scrollYProgress, [0, 1], [0, -100]);
+  const scale = useTransform(scrollYProgress, [0, 0.3, 0.7, 1], [0.8, 1, 1, 0.8]);
+  const opacity = useTransform(scrollYProgress, [0, 0.2, 0.8, 1], [0, 1, 1, 0]);
+  const rotate = useTransform(scrollYProgress, [0, 1], [0, 1]);
 
   return (
-    <section className="min-h-screen flex items-center justify-center p-4 bg-gradient-to-b from-background/50 to-background overflow-hidden">
+    <section ref={ref} className="min-h-screen flex items-center justify-center p-4 bg-gradient-to-b from-background/50 to-background overflow-hidden">
       <motion.div
         style={{ scale, opacity }}
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+        viewport={{ once: false, amount: 0.3 }}
         className="max-w-3xl w-full relative"
       >
         <motion.div

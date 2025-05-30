@@ -1,7 +1,8 @@
-import { motion } from "framer-motion";
+import { motion, useTransform, useScroll } from "framer-motion";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Mail, Github, Linkedin } from "lucide-react";
+import { Mail, Github, Linkedin, Twitter } from "lucide-react";
+import { useRef } from "react";
 
 export default function Contact() {
   return (
@@ -18,7 +19,7 @@ export default function Contact() {
             <div className="absolute top-0 right-0 w-60 h-60 bg-gradient-to-bl from-primary/20 to-blue-500/20 rounded-full blur-3xl animate-pulse-slow" />
             <div className="absolute bottom-0 left-0 w-48 h-48 bg-gradient-to-tr from-purple-500/20 to-primary/20 rounded-full blur-2xl animate-float" />
             <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-conic opacity-10 rounded-full blur-3xl animate-spin-slow" />
-            
+
             <div className="relative z-10">
               <motion.h2 
                 className="text-5xl md:text-6xl font-bold mb-6 gradient-text text-center"
@@ -29,7 +30,7 @@ export default function Contact() {
               >
                 Get in Touch
               </motion.h2>
-              
+
               <motion.p 
                 className="text-center text-muted-foreground mb-10 text-lg"
                 initial={{ opacity: 0, y: 20 }}
@@ -39,7 +40,7 @@ export default function Contact() {
               >
                 Let's collaborate and create something amazing together
               </motion.p>
-              
+
               <div className="grid md:grid-cols-3 gap-6">
                 {[
                   { 
@@ -94,7 +95,7 @@ export default function Contact() {
                   </motion.div>
                 ))}
               </div>
-              
+
               {/* Call to action */}
               <motion.div 
                 className="text-center mt-12 pt-8 border-t border-primary/20"
