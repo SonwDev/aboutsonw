@@ -26,9 +26,9 @@ const item = {
 export default function Skills() {
   const { scrollYProgress } = useScroll();
 
-  const y1 = useTransform(scrollYProgress, [0.2, 1], [0, -40]);
-  const scale = useTransform(scrollYProgress, [0.2, 0.5], [0.95, 1]);
-  const opacity = useTransform(scrollYProgress, [0.2, 0.3, 0.8, 1], [0, 1, 1, 1]);
+  const y1 = useTransform(scrollYProgress, [0.3, 1], [0, -100]);
+  const scale = useTransform(scrollYProgress, [0.3, 0.6], [0.8, 1]);
+  const opacity = useTransform(scrollYProgress, [0.3, 0.4, 0.8], [0, 1, 1]);
 
   return (
     <section className="min-h-screen flex items-center justify-center p-4 bg-gradient-to-b from-background/50 to-background overflow-hidden">
@@ -38,7 +38,7 @@ export default function Skills() {
       >
         <motion.div
           style={{ y: y1 }}
-          className="absolute -top-40 -right-40 w-80 h-80 bg-primary/3 rounded-full blur-xl"
+          className="absolute -top-40 -right-40 w-80 h-80 bg-primary/5 rounded-full blur-3xl"
         />
 
         <Card className="border-primary/30 backdrop-blur-md bg-gradient-to-br from-background/90 via-background/95 to-background/80 shadow-2xl shadow-primary/10">

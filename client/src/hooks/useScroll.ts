@@ -5,17 +5,9 @@ export default function useScroll() {
   const [viewportHeight, setViewportHeight] = useState(0);
 
   useEffect(() => {
-    let ticking = false;
-
     const handleScroll = () => {
-      if (!ticking) {
-        requestAnimationFrame(() => {
-          const position = window.scrollY;
-          setScrollPosition(position);
-          ticking = false;
-        });
-        ticking = true;
-      }
+      const position = window.scrollY;
+      setScrollPosition(position);
     };
 
     const handleResize = () => {
@@ -26,7 +18,7 @@ export default function useScroll() {
     handleScroll();
     handleResize();
 
-    window.addEventListener('scroll', handleScroll, { passive: true });
+    window.addEventListener('scroll', handleScroll);
     window.addEventListener('resize', handleResize);
 
     return () => {

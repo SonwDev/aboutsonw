@@ -4,9 +4,9 @@ import { Card, CardContent } from "@/components/ui/card";
 export default function About() {
   const { scrollYProgress } = useScroll();
 
-  const y1 = useTransform(scrollYProgress, [0, 1], [0, -20]);
-  const y2 = useTransform(scrollYProgress, [0, 1], [0, -30]);
-  const opacity = useTransform(scrollYProgress, [0, 0.1, 0.9, 1], [1, 1, 1, 0.8]);
+  const y1 = useTransform(scrollYProgress, [0, 1], [0, -50]);
+  const y2 = useTransform(scrollYProgress, [0, 1], [0, -100]);
+  const opacity = useTransform(scrollYProgress, [0, 0.2, 0.3], [1, 1, 0]);
 
   return (
     <section className="min-h-screen flex items-center justify-center p-4 sm:p-6 md:p-8 bg-gradient-to-b from-background to-background/50 overflow-hidden">
@@ -18,11 +18,11 @@ export default function About() {
       >
         <motion.div
           style={{ y: y1 }}
-          className="absolute -top-20 -left-20 w-40 h-40 bg-primary/5 rounded-full blur-xl"
+          className="absolute -top-20 -left-20 w-40 h-40 bg-primary/10 rounded-full blur-3xl"
         />
         <motion.div
           style={{ y: y2 }}
-          className="absolute -bottom-20 -right-20 w-40 h-40 bg-blue-500/5 rounded-full blur-xl"
+          className="absolute -bottom-20 -right-20 w-40 h-40 bg-blue-500/10 rounded-full blur-3xl"
         />
 
         <motion.div style={{ opacity }}>
