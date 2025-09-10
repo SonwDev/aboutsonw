@@ -5,7 +5,7 @@
 ## 🧑‍💻 Giới thiệu về tớ
 Xin chào! Tớ là **[Sơn]**, một người đam mê lập trình và sáng tạo. Tớ là một người yêu thích việc xây dựng những sản phẩm thú vị và hữu ích cho cộng đồng.  
 
-- 💡 Đam mê: [Lập trình | Thiết kế | AI | Arruino ...]  
+- 💡 Đam mê: [Lập trình | Thiết kế | AI | Arduino ...]  
 - 🔨 Kinh nghiệm: [Python, C++]  
 - 🚀 Dự án nổi bật: [Calculator 3D]  
 - 📫 Liên hệ với tớ: [kazumiyarine@gmail.com | facebook.com/transsonw]  
