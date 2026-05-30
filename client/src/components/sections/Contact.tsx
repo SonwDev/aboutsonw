@@ -13,12 +13,9 @@ export default function Contact() {
         viewport={{ once: true, amount: 0.2 }}
         className="max-w-4xl w-full"
       >
-        <Card className="border-primary/30 bg-background/80 shadow-2xl shadow-primary/20">
-          <CardContent className="p-8 md:p-16 relative overflow-hidden">
-            <div className="absolute top-0 right-0 w-60 h-60 bg-primary/5 rounded-full blur-3xl pointer-events-none" />
-            <div className="absolute bottom-0 left-0 w-48 h-48 bg-purple-500/5 rounded-full blur-2xl pointer-events-none" />
-
-            <div className="relative z-10">
+        <Card className="border-primary/30 bg-background/80 shadow-xl shadow-black/30">
+          <CardContent className="p-8 md:p-16">
+            <div>
               <motion.h2
                 className="text-5xl md:text-6xl font-bold mb-6 gradient-text text-center"
                 initial={{ opacity: 0, y: 20 }}
@@ -106,7 +103,7 @@ export default function Contact() {
                 </p>
                 <Button
                   size="lg"
-                  className="bg-gradient-to-r from-primary to-blue-500 hover:from-primary/90 hover:to-blue-500/90 shadow-lg hover:shadow-primary/25 transition-all duration-200"
+                  className="bg-gradient-to-r from-primary to-blue-500 hover:opacity-90 transition-opacity duration-150"
                   asChild
                 >
                   <a href="mailto:kazumiyarine@gmail.com">
