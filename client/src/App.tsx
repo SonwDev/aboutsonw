@@ -5,7 +5,6 @@ import { Toaster } from "@/components/ui/toaster";
 import Home from "@/pages/Home";
 import NotFound from "@/pages/not-found";
 import Navigation from "@/components/ui/Navigation";
-import Cursor from "@/components/ui/Cursor";
 import BackgroundParticles from "@/components/ui/BackgroundParticles";
 
 function Router() {
@@ -21,7 +20,6 @@ function App() {
   return (
     <QueryClientProvider client={queryClient}>
       <BackgroundParticles />
-      <Cursor />
       <Navigation />
       <Router />
       <Toaster />
