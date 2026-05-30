@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-
 import { Mail, Github, Youtube } from "lucide-react";
 
 const contacts = [
@@ -48,7 +47,6 @@ export default function Contact() {
               Let's collaborate and create something amazing together
             </p>
 
-<<<<<<< HEAD
             <div className="grid md:grid-cols-3 gap-6">
               {contacts.map((contact, i) => (
                 <a
@@ -57,7 +55,6 @@ export default function Contact() {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="group flex flex-col items-center gap-4 p-6 rounded-xl border border-primary/20 bg-background/50 hover:border-primary/40 hover:bg-primary/5 transition-colors duration-200"
-=======
               <motion.p 
                 className="text-center text-muted-foreground mb-10 text-lg"
                 initial={{ opacity: 0, y: 20 }}
@@ -138,7 +135,7 @@ export default function Contact() {
                   size="lg"
                   className="bg-gradient-to-r from-primary to-blue-500 hover:from-primary/90 hover:to-blue-500/90 shadow-lg hover:shadow-primary/25 transition-all duration-300"
                   asChild
->>>>>>> 4834134a206dec8c728ca9121880af0f8e2692a2
+
                 >
                   <div className={`p-3 rounded-full bg-gradient-to-r ${contact.color} group-hover:scale-110 transition-transform duration-200`}>
                     <contact.icon className="h-6 w-6 text-white" />
