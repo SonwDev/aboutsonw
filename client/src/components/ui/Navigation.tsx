@@ -81,9 +81,9 @@ export default function Navigation() {
                 transition={{ duration: 0.2, delay: 0.1 }}
               >
               {[
-                  { label: "About", scrollTo: 0 },
-                  { label: "Skills", scrollTo: window.innerHeight },
-                  { label: "Contact", scrollTo: window.innerHeight * 2 }
+                  { label: "About", getScrollTo: () => 0 },
+                  { label: "Skills", getScrollTo: () => window.innerHeight },
+                  { label: "Contact", getScrollTo: () => window.innerHeight * 2 }
                 ].map((item, index) => (
                   <motion.div
                     key={item.label}
@@ -96,7 +96,7 @@ export default function Navigation() {
                       variant="ghost"
                       className="w-full text-left hover:bg-primary/10 transition-colors duration-200"
                       onClick={() => {
-                        window.scrollTo(0, item.scrollTo);
+                        window.scrollTo(0, item.getScrollTo());
                         setIsOpen(false);
                       }}
                     >

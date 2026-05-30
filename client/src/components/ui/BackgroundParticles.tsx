@@ -3,14 +3,15 @@ import React from 'react';
 import { motion } from 'framer-motion';
 
 const BackgroundParticles: React.FC = () => {
-  const particles = Array.from({ length: 20 }, (_, i) => ({
+  const particles = React.useMemo(() => Array.from({ length: 20 }, (_, i) => ({
     id: i,
     x: Math.random() * 100,
     y: Math.random() * 100,
     size: Math.random() * 4 + 2,
     duration: Math.random() * 20 + 20,
     delay: Math.random() * 10,
-  }));
+    driftX: Math.random() * 100 - 50,
+  })), []);
 
   return (
     <div className="fixed inset-0 overflow-hidden pointer-events-none z-0">
@@ -26,7 +27,7 @@ const BackgroundParticles: React.FC = () => {
           }}
           animate={{
             y: [0, -100, 0],
-            x: [0, Math.random() * 100 - 50, 0],
+            x: [0, particle.driftX, 0],
             opacity: [0, 0.6, 0],
             scale: [0.5, 1, 0.5],
           }}

@@ -1,16 +1,16 @@
-import { motion, useTransform, useScroll } from "framer-motion";
+import { motion } from "framer-motion";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Mail, Github, Linkedin, Twitter } from "lucide-react";
-import { useRef } from "react";
+import { Mail, Github, Linkedin } from "lucide-react";
 
 export default function Contact() {
   return (
     <section className="min-h-screen flex items-center justify-center p-4 bg-gradient-to-b from-background to-background/50">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
+        whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
+        viewport={{ once: true, amount: 0.2 }}
         className="max-w-4xl w-full"
       >
         <Card className="glass-strong border-primary/40 bg-gradient-to-br from-background/60 via-background/80 to-background/60 shadow-2xl shadow-primary/20 card-hover">
