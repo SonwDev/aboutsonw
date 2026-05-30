@@ -17,7 +17,7 @@ export default function Navigation() {
             </Button>
           </Link>
 
-          <div className="hidden md:flex space-x-4">
+          <div className="hidden md:flex space-x-4 ml-auto">
             <Button variant="ghost" onClick={() => window.scrollTo(0, 0)}>
               About
             </Button>
