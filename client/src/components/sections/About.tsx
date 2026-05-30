@@ -21,7 +21,7 @@ export default function About() {
         initial="hidden"
         whileInView="show"
         exit="exit"
-        viewport={{ once: false, amount: 0.2 }}
+        viewport={{ once: true, amount: 0.2 }}
         className="max-w-3xl w-full"
         style={{ willChange: "transform, opacity" }}
       >

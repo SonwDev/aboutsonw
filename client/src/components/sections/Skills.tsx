@@ -35,7 +35,7 @@ export default function Skills() {
         initial="hidden"
         whileInView="show"
         exit="exit"
-        viewport={{ once: false, amount: 0.15 }}
+        viewport={{ once: true, amount: 0.15 }}
         className="max-w-3xl w-full"
         style={{ willChange: "transform, opacity" }}
       >
@@ -78,7 +78,7 @@ export default function Skills() {
                       initial={{ width: 0 }}
                       whileInView={{ width: `${bar.level}%` }}
                       transition={{ duration: 0.7, delay: 0.1 + i * 0.07, ease: "easeOut" }}
-                      viewport={{ once: false, amount: 0.5 }}
+                      viewport={{ once: true, amount: 0.5 }}
                     />
                   </div>
                 </div>
