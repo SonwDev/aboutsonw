@@ -3,68 +3,72 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Mail, Github, Youtube } from "lucide-react";
 
-const section = {
-  hidden: { opacity: 0, y: 32 },
-  show: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut", staggerChildren: 0.08 } },
-  exit:  { opacity: 0, y: -16, transition: { duration: 0.3, ease: "easeIn" } }
-};
-
-const child = {
-  hidden: { opacity: 0, y: 20 },
-  show:  { opacity: 1, y: 0, transition: { duration: 0.4, ease: "easeOut" } },
-  exit:  { opacity: 0, transition: { duration: 0.2 } }
-};
+const contacts = [
+  {
+    icon: Mail,
+    label: "Email",
+    value: "sonwbusiness@gmail.com",
+    href: "mailto:sonwbusiness@gmail.com",
+    color: "from-red-500 to-orange-500"
+  },
+  {
+    icon: Github,
+    label: "GitHub",
+    value: "View Profile",
+    href: "https://github.com",
+    color: "from-gray-600 to-gray-800"
+  },
+  {
+    icon: Youtube,
+    label: "YouTube",
+    value: "@TransSonw",
+    href: "https://www.youtube.com/@TransSonw",
+    color: "from-red-600 to-red-800"
+  }
+];
 
 export default function Contact() {
   return (
     <section className="min-h-screen flex items-center justify-center p-4">
       <motion.div
-        variants={section}
-        initial="hidden"
-        whileInView="show"
-        exit="exit"
-        viewport={{ once: true, amount: 0.15 }}
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, ease: "easeOut" }}
+        viewport={{ once: true, amount: 0.1 }}
         className="max-w-4xl w-full"
-        style={{ willChange: "transform, opacity" }}
       >
         <Card className="border-primary/30 bg-background/80 shadow-xl shadow-black/30">
           <CardContent className="p-8 md:p-16">
             <motion.h2
-              variants={child}
-              className="text-5xl md:text-6xl font-bold mb-6 gradient-text text-center"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, ease: "easeOut", delay: 0.1 }}
+              viewport={{ once: true, amount: 0.1 }}
+              className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-primary via-blue-500 to-purple-600 bg-clip-text text-transparent text-center"
             >
               Get in Touch
             </motion.h2>
 
-            <motion.p variants={child} className="text-center text-muted-foreground mb-10 text-lg">
+            <motion.p
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              viewport={{ once: true, amount: 0.1 }}
+              className="text-center text-muted-foreground mb-10 text-lg"
+            >
               Let's collaborate and create something amazing together
             </motion.p>
 
-            <motion.div variants={section} className="grid md:grid-cols-3 gap-6">
-              {[
-                {
-                  icon: Mail,
-                  label: "Email",
-                  value: "sonwbusiness@gmail.com",
-                  href: "mailto:sonwbusiness@gmail.com",
-                  color: "from-red-500 to-orange-500"
-                },
-                {
-                  icon: Github,
-                  label: "GitHub",
-                  value: "View Profile",
-                  href: "https://github.com",
-                  color: "from-gray-600 to-gray-800"
-                },
-                {
-                  icon: Youtube,
-                  label: "YouTube",
-                  value: "Watch Channel",
-                  href: "https://www.youtube.com/@TransSonw",
-                  color: "from-red-600 to-red-800"
-                }
-              ].map((contact, index) => (
-                <motion.div key={index} variants={child} whileHover={{ y: -4 }}>
+            <div className="grid md:grid-cols-3 gap-6">
+              {contacts.map((contact, i) => (
+                <motion.div
+                  key={i}
+                  initial={{ opacity: 0, y: 24 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.4, ease: "easeOut", delay: 0.2 + i * 0.1 }}
+                  viewport={{ once: true, amount: 0.1 }}
+                  whileHover={{ y: -4 }}
+                >
                   <Button
                     variant="outline"
                     className="w-full h-auto p-6 flex flex-col items-center gap-4 border-primary/20 hover:border-primary/40 bg-background/50 hover:bg-primary/5 transition-colors duration-200 group"
@@ -84,9 +88,15 @@ export default function Contact() {
                   </Button>
                 </motion.div>
               ))}
-            </motion.div>
+            </div>
 
-            <motion.div variants={child} className="text-center mt-12 pt-8 border-t border-primary/20">
+            <motion.div
+              initial={{ opacity: 0, y: 16 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.5 }}
+              viewport={{ once: true, amount: 0.1 }}
+              className="text-center mt-12 pt-8 border-t border-primary/20"
+            >
               <p className="text-muted-foreground mb-4">Have a project in mind? I'd love to hear about it!</p>
               <Button
                 size="lg"
