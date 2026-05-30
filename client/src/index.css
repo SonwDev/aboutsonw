@@ -49,7 +49,9 @@
 
   body {
     @apply font-sans antialiased text-foreground;
-    background-color: hsl(222.2, 84%, 4.9%);
+    background: linear-gradient(135deg, #020818, #0d0a2e, #050d1a, #120820, #020818);
+    background-size: 400% 400%;
+    animation: gradientShift 12s ease infinite;
     min-height: 100vh;
   }
 
@@ -100,6 +102,12 @@
     .xs\:grid-cols-2 {
       grid-template-columns: repeat(2, minmax(0, 1fr));
     }
+  }
+
+  @keyframes gradientShift {
+    0%   { background-position: 0% 50%; }
+    50%  { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
   }
 
   /* Particle float — compositor-only, transform + opacity only */
