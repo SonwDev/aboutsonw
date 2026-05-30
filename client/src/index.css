@@ -53,21 +53,13 @@
     min-height: 100vh;
   }
 
+  html {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
   ::-webkit-scrollbar {
-    width: 8px;
-  }
-
-  ::-webkit-scrollbar-track {
-    background: transparent;
-  }
-
-  ::-webkit-scrollbar-thumb {
-    background: hsl(240, 100%, 65%, 0.4);
-    border-radius: 9999px;
-  }
-
-  ::-webkit-scrollbar-thumb:hover {
-    background: hsl(240, 100%, 65%, 0.6);
+    display: none;
   }
 
   ::selection {
