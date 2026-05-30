@@ -18,19 +18,13 @@ export default function Navigation() {
           </Link>
 
           <div className="hidden md:flex space-x-4 ml-auto">
-            <Button variant="ghost" onClick={() => window.scrollTo(0, 0)}>
+            <Button variant="ghost" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
               About
             </Button>
-            <Button
-              variant="ghost"
-              onClick={() => window.scrollTo(0, window.innerHeight)}
-            >
+            <Button variant="ghost" onClick={() => window.scrollTo({ top: window.innerHeight, behavior: "smooth" })}>
               Skills
             </Button>
-            <Button
-              variant="ghost"
-              onClick={() => window.scrollTo(0, window.innerHeight * 2)}
-            >
+            <Button variant="ghost" onClick={() => window.scrollTo({ top: window.innerHeight * 2, behavior: "smooth" })}>
               Contact
             </Button>
           </div>
@@ -96,7 +90,7 @@ export default function Navigation() {
                       variant="ghost"
                       className="w-full text-left hover:bg-primary/10 transition-colors duration-200"
                       onClick={() => {
-                        window.scrollTo(0, item.getScrollTo());
+                        window.scrollTo({ top: item.getScrollTo(), behavior: "smooth" });
                         setIsOpen(false);
                       }}
                     >
