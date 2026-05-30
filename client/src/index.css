@@ -49,9 +49,7 @@
 
   body {
     @apply font-sans antialiased text-foreground;
-    background: linear-gradient(135deg, #020818, #0d0a2e, #050d1a, #120820, #020818);
-    background-size: 400% 400%;
-    animation: gradientShift 12s ease infinite;
+    background: #020818;
     min-height: 100vh;
   }
 
@@ -104,10 +102,53 @@
     }
   }
 
-  @keyframes gradientShift {
-    0%   { background-position: 0% 50%; }
-    50%  { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
+  .orb {
+    position: absolute;
+    border-radius: 50%;
+  }
+
+  .orb-purple {
+    width: 55vw;
+    height: 55vw;
+    top: 5vh;
+    left: -5vw;
+    background: radial-gradient(circle, rgba(139, 92, 246, 0.55) 0%, rgba(109, 40, 217, 0.25) 45%, transparent 70%);
+    animation: floatOrb1 18s ease-in-out infinite;
+  }
+
+  .orb-blue {
+    width: 50vw;
+    height: 50vw;
+    top: 30vh;
+    right: -5vw;
+    background: radial-gradient(circle, rgba(59, 130, 246, 0.5) 0%, rgba(37, 99, 235, 0.2) 45%, transparent 70%);
+    animation: floatOrb2 22s ease-in-out infinite;
+  }
+
+  .orb-teal {
+    width: 40vw;
+    height: 40vw;
+    bottom: 5vh;
+    left: 20vw;
+    background: radial-gradient(circle, rgba(20, 184, 166, 0.35) 0%, rgba(6, 182, 212, 0.15) 45%, transparent 70%);
+    animation: floatOrb3 15s ease-in-out infinite;
+  }
+
+  @keyframes floatOrb1 {
+    0%, 100% { transform: translate(0, 0); }
+    33%       { transform: translate(12vw, 18vh); }
+    66%       { transform: translate(4vw, 35vh); }
+  }
+
+  @keyframes floatOrb2 {
+    0%, 100% { transform: translate(0, 0); }
+    40%       { transform: translate(-14vw, -10vh); }
+    70%       { transform: translate(-6vw, 12vh); }
+  }
+
+  @keyframes floatOrb3 {
+    0%, 100% { transform: translate(0, 0); opacity: 1; }
+    50%       { transform: translate(10vw, -15vh); opacity: 0.6; }
   }
 
   /* Particle float — compositor-only, transform + opacity only */

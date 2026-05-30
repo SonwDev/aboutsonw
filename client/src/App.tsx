@@ -17,6 +17,11 @@ function Router() {
 function App() {
   return (
     <QueryClientProvider client={queryClient}>
+      <div className="fixed inset-0 -z-10 overflow-hidden pointer-events-none" aria-hidden="true">
+        <div className="orb orb-purple" />
+        <div className="orb orb-blue" />
+        <div className="orb orb-teal" />
+      </div>
       <Navigation />
       <Router />
       <Toaster />
