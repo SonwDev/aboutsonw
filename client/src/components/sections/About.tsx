@@ -27,7 +27,6 @@ export default function About() {
                 My goal is to craft digital experiences that are both visually stunning
                 and highly performant, focusing on user-centered design and clean, maintainable code.
               </p>
-
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 mt-6 sm:mt-8 pt-4 sm:pt-6 border-t border-primary/20">
                 {[
                   { number: "50+", label: "Projects Completed" },
@@ -40,6 +39,7 @@ export default function About() {
                   </div>
                 ))}
               </div>
+
             </div>
           </CardContent>
         </Card>

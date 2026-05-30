@@ -5,8 +5,8 @@ import { Badge } from "@/components/ui/badge";
 
 const skills = [
   "Python", "TypeScript", "Next.js", "TailwindCSS",
-  "Node.js", "PostgreSQL", "Git", "AWS",
-  "UI/UX Design", "Responsive Design", "RESTful APIs", "GraphQL"
+  "Node.js", "PostgreSQL", "C++", "AWS",
+  "UI/UX Design", "Arduino", "RESTful APIs", "GraphQL"
 ];
 
 const proficiency = [
@@ -65,6 +65,7 @@ export default function Skills() {
                   <div className="flex justify-between text-sm">
                     <span className="text-foreground/80">{bar.category}</span>
                     <span className="text-primary font-medium">{bar.level}%</span>
+
                   </div>
                   <div className="w-full bg-secondary/30 rounded-full h-2">
                     <div
