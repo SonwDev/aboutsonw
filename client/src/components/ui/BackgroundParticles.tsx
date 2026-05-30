@@ -1,49 +1,35 @@
-
 import React from 'react';
-import { motion } from 'framer-motion';
 
 const BackgroundParticles: React.FC = () => {
-  const particles = React.useMemo(() => Array.from({ length: 20 }, (_, i) => ({
+  const particles = React.useMemo(() => Array.from({ length: 12 }, (_, i) => ({
     id: i,
     x: Math.random() * 100,
     y: Math.random() * 100,
     size: Math.random() * 4 + 2,
     duration: Math.random() * 20 + 20,
     delay: Math.random() * 10,
-    driftX: Math.random() * 100 - 50,
+    driftX: Math.random() * 80 - 40,
   })), []);
 
   return (
-    <div className="fixed inset-0 overflow-hidden pointer-events-none z-0">
-      {particles.map((particle) => (
-        <motion.div
-          key={particle.id}
-          className="absolute rounded-full bg-gradient-to-r from-primary/20 via-blue-400/20 to-purple-500/20 blur-sm"
+    <div className="fixed inset-0 overflow-hidden pointer-events-none z-0" aria-hidden="true">
+      {particles.map((p) => (
+        <div
+          key={p.id}
+          className="absolute rounded-full bg-primary/10 blur-sm"
           style={{
-            left: `${particle.x}%`,
-            top: `${particle.y}%`,
-            width: `${particle.size}px`,
-            height: `${particle.size}px`,
-          }}
-          animate={{
-            y: [0, -100, 0],
-            x: [0, particle.driftX, 0],
-            opacity: [0, 0.6, 0],
-            scale: [0.5, 1, 0.5],
-          }}
-          transition={{
-            duration: particle.duration,
-            repeat: Infinity,
-            delay: particle.delay,
-            ease: "easeInOut",
-          }}
+            left: `${p.x}%`,
+            top: `${p.y}%`,
+            width: `${p.size}px`,
+            height: `${p.size}px`,
+            animation: `particleFloat ${p.duration}s ease-in-out ${p.delay}s infinite`,
+            '--drift-x': `${p.driftX}px`,
+          } as React.CSSProperties}
         />
       ))}
-      
-      {/* Gradient overlays */}
       <div className="absolute top-0 left-0 w-1/3 h-1/3 bg-gradient-radial opacity-30" />
       <div className="absolute bottom-0 right-0 w-1/3 h-1/3 bg-gradient-conic opacity-20" />
-      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-2/3 h-2/3 bg-dot-pattern opacity-10" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-2/3 h-2/3 bg-dot-pattern opacity-10" />
     </div>
   );
 };

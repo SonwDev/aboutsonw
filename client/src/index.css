@@ -85,16 +85,10 @@ section {
     min-height: 100vh;
   }
 
-  /* Enhanced cursor behavior */
+  /* Custom cursor on desktop */
   @media (hover: hover) and (pointer: fine) {
     button, a, [role="button"], .interactive {
-      @apply cursor-none hover:opacity-90 transition-all duration-300 hover:scale-105;
-    }
-  }
-
-  @media (hover: none) {
-    button, a, [role="button"], .interactive {
-      @apply cursor-auto active:opacity-90 active:scale-95 transition-all duration-200;
+      @apply cursor-none;
     }
   }
 
@@ -332,6 +326,14 @@ section {
       opacity: 1;
       transform: translateX(0);
     }
+  }
+
+  /* Particle float animation (CSS-only, runs on compositor) */
+  @keyframes particleFloat {
+    0%, 100% { transform: translateY(0) translateX(0) scale(0.5); opacity: 0; }
+    20%       { opacity: 0.5; }
+    50%       { transform: translateY(-100px) translateX(var(--drift-x)) scale(1); opacity: 0.4; }
+    80%       { opacity: 0.2; }
   }
 
   /* Background patterns */

@@ -18,10 +18,6 @@ export default function About() {
     <section ref={ref} className="min-h-screen flex items-center justify-center p-4 sm:p-6 md:p-8 bg-gradient-to-b from-background to-background/50 overflow-hidden">
       <motion.div
         style={{ opacity, scale }}
-        initial={{ opacity: 0, y: 50 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, ease: "easeOut" }}
-        viewport={{ once: false, amount: 0.3 }}
         className="max-w-3xl w-full relative px-2 sm:px-4"
       >
         <motion.div

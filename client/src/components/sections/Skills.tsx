@@ -39,10 +39,6 @@ export default function Skills() {
     <section ref={ref} className="min-h-screen flex items-center justify-center p-4 bg-gradient-to-b from-background/50 to-background overflow-hidden">
       <motion.div
         style={{ scale, opacity }}
-        initial={{ opacity: 0, y: 50 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, ease: "easeOut" }}
-        viewport={{ once: false, amount: 0.3 }}
         className="max-w-3xl w-full relative"
       >
         <motion.div
