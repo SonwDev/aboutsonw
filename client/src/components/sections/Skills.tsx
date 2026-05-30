@@ -37,26 +37,24 @@ export default function Skills() {
               Skills &amp; Expertise
             </motion.h2>
 
-            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4">
-              {skills.map((skill, i) => (
-                <motion.div
-                  key={skill}
-                  initial={{ opacity: 0, y: 12 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.3, ease: "easeOut", delay: 0.1 + i * 0.04 }}
-                  viewport={{ once: true, amount: 0.1 }}
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                >
+            <motion.div
+              initial={{ opacity: 0, y: 16 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, ease: "easeOut", delay: 0.15 }}
+              viewport={{ once: true, amount: 0.1 }}
+              className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4"
+            >
+              {skills.map((skill) => (
+                <div key={skill} className="group">
                   <Badge
                     variant="secondary"
-                    className="w-full text-center py-3 px-4 text-sm font-medium bg-background/60 border border-primary/20 hover:border-primary/40 hover:bg-primary/10 transition-colors duration-150"
+                    className="w-full text-center py-3 px-4 text-sm font-medium bg-background/60 border border-primary/20 hover:border-primary/40 hover:bg-primary/10 transition-colors duration-150 cursor-default"
                   >
                     {skill}
                   </Badge>
-                </motion.div>
+                </div>
               ))}
-            </div>
+            </motion.div>
 
             <motion.div
               initial={{ opacity: 0, y: 20 }}
