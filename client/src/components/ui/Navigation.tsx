@@ -8,7 +8,7 @@ export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="fixed top-0 left-0 w-full z-50 bg-background/80 backdrop-blur-sm">
+    <nav className="fixed top-0 left-0 w-full z-50 bg-background/90 border-b border-white/5">
       <div className="max-w-7xl mx-auto px-3 sm:px-4">
         <div className="flex items-center justify-between h-14 sm:h-16">
           <Link href="/">

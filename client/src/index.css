@@ -80,8 +80,7 @@ section {
 
   body {
     @apply font-sans antialiased text-foreground;
-    background: radial-gradient(ellipse at top, hsl(240, 100%, 8%) 0%, hsl(222.2, 84%, 4.9%) 50%, hsl(217.2, 32.6%, 2%) 100%);
-    background-attachment: fixed;
+    background-color: hsl(222.2, 84%, 4.9%);
     min-height: 100vh;
   }
 
@@ -129,16 +128,16 @@ section {
 @layer components {
   /* Enhanced glass morphism */
   .glass {
-    @apply backdrop-blur-xl bg-background/20 border border-white/10;
+    @apply bg-background/60 border border-white/10;
     box-shadow: 
       0 0 0 1px rgba(255, 255, 255, 0.05) inset,
       0 25px 50px -12px rgba(0, 0, 0, 0.5);
   }
 
   .glass-strong {
-    @apply backdrop-blur-2xl bg-background/40 border border-white/20;
+    @apply bg-background/70 border border-white/15;
     box-shadow: 
-      0 0 0 1px rgba(255, 255, 255, 0.1) inset,
+      0 0 0 1px rgba(255, 255, 255, 0.08) inset,
       0 25px 50px -12px rgba(0, 0, 0, 0.7);
   }
 
