@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Mail, Github, Linkedin } from "lucide-react";
+import { Mail, Github, Youtube } from "lucide-react";
 
 export default function Contact() {
   return (
@@ -41,8 +41,8 @@ export default function Contact() {
                   {
                     icon: Mail,
                     label: "Email",
-                    value: "kazumiyarine@gmail.com",
-                    href: "mailto:kazumiyarine@gmail.com",
+                    value: "sonwbusiness@gmail.com",
+                    href: "mailto:sonwbusiness@gmail.com",
                     color: "from-red-500 to-orange-500"
                   },
                   {
@@ -53,11 +53,11 @@ export default function Contact() {
                     color: "from-gray-600 to-gray-800"
                   },
                   {
-                    icon: Linkedin,
-                    label: "LinkedIn",
-                    value: "Connect",
-                    href: "https://linkedin.com",
-                    color: "from-blue-600 to-blue-800"
+                    icon: Youtube,
+                    label: "YouTube",
+                    value: "Watch Channel",
+                    href: "https://www.youtube.com/@TransSonw",
+                    color: "from-red-600 to-red-800"
                   }
                 ].map((contact, index) => (
                   <motion.div
@@ -106,7 +106,7 @@ export default function Contact() {
                   className="bg-gradient-to-r from-primary to-blue-500 hover:opacity-90 transition-opacity duration-150"
                   asChild
                 >
-                  <a href="mailto:kazumiyarine@gmail.com">
+                  <a href="mailto:sonwbusiness@gmail.com">
                     Start a Conversation
                   </a>
                 </Button>
