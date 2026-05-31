@@ -19,7 +19,7 @@ Hello! I'm **Sơn (Sonw)**, a passionate programmer and creative developer from 
 
 ### 📞 Get In Touch
 
-- **Email**: [kazumiyarine@gmail.com](mailto:kazumiyarine@gmail.com)
+- **Email**: [sonwbusiness@gmail.com](mailto:sonwbusiness@gmail.com)
 - **Facebook**: [@transsonw](https://facebook.com/transsonw)
 - **GitHub**: [@SonwDev](https://github.com/SonwDev)
 
@@ -186,7 +186,6 @@ Contributions are welcome! Feel free to open issues or submit pull requests.
 - [ ] Implement project showcase with filters
 - [ ] Add analytics dashboard
 - [ ] Create interactive skill visualizations
-- [ ] Mobile app version
 - [ ] API documentation
 
 ---
@@ -194,7 +193,7 @@ Contributions are welcome! Feel free to open issues or submit pull requests.
 ## 📞 Support
 
 If you have any questions or feedback, please reach out:
-- 📧 Email: kazumiyarine@gmail.com
+- 📧 Email: sonwbusiness@gmail.com
 - 💬 GitHub Issues: [Create an issue](https://github.com/SonwDev/aboutsonw/issues)
 
 ---
