@@ -10,10 +10,10 @@ const skills = [
 ];
 
 const proficiency = [
-  { category: "Frontend Development", level: 95 },
-  { category: "Backend Development", level: 85 },
-  { category: "UI/UX Design",         level: 80 },
-  { category: "Database Management",  level: 75 }
+  { category: "Frontend Development", level: 70 },
+  { category: "Backend Development", level: 20 },
+  { category: "UI/UX Design",         level: 50 },
+  { category: "Database Management",  level: 10 }
 ];
 
 export default function Skills() {
